@@ -8,12 +8,12 @@ int main() {
 #ifdef _WIN32
     FreeConsole();
 #endif
-    InitImgui();
-    StartImgui();
+    InitImGui();
+    StartImGui();
 
     // Example render loop
     for (int i = 0; i < 1; ++i) {
-        RenderImgui();
+        RenderImGui();
     }
 
     return 0;

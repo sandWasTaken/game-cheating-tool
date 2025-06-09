@@ -1,8 +1,8 @@
 #ifndef GUI_H
 #define GUI_H
 
-void InitImgui();
-void StartImgui();
-void RenderImgui();
+void InitImGui();
+void StartImGui();
+void RenderImGui();
 
 #endif // GUI_H
