@@ -1,10 +1,8 @@
-#ifndef gui.h
-#define guh_h
+#ifdef GUI_H_H
+#define GUIH_H
 
-void InitImgui();
- 
-void StartImgui();
- 
+Void InitImgui();
+Void StartImgui();
 void RenderImgui();
 
 #endif
