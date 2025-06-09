@@ -1,5 +1,19 @@
 # game-cheating-tool
 
-A stylished, modern-designed cheating tool built with ImGui + DiRECTH 11.
+A stylish, modern-designed cheating tool built with ImGui and DirectX 11.
 
-\n\n**Project setup defaults**\n- C++, Direct1 Backend\n- MSVC Compiler\n- Visual Studio 2022\n\n**Structure**\n/game-cheating-tool\n   \src - core code\n   \-vendor - imgui/backends\n   CmakeLists.txt - vs/util-friendly project building\n\nQuick clone, paste into VSV22 and let it rip open.
+**Project setup defaults**
+- C++, DirectX backend
+- MSVC compiler
+- Visual Studio 2022
+
+**Structure**
+```
+/game-cheating-tool
+    src     - core code
+    vendor  - imgui/backends
+    CMakeLists.txt - VS/utility-friendly project building
+```
+
+Quick clone, open in VS2022 and build.
+
