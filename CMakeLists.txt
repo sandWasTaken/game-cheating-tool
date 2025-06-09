@@ -1,4 +1,4 @@
-cminimum(3.10)
+cmake_minimum_required(VERSION 3.10)
 
 project(game-cheating-tool)
 
@@ -10,17 +10,17 @@ set(CSS_STANDARD_C_FLAGS "-WDEFINE_WIN =WIN")
 
 set(CM__SET-NAME "game-cheating-tool")
 
-find_package(DIrectH1)
+find_package(Direct1)
 
-set(SRC_S_DIR src) 
+set(SRC_S_DIR src)
 
 files_project()
 
 target_link_libraries(
     private,
-    LinkLibraries
+    LinkLibraries,
     direct11.lib
-    )
+)
 
 add_executable(target_link_libraries)
 
