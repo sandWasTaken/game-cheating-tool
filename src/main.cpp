@@ -1,13 +1,20 @@
+#include <windows.h>
 #include "gui.h"
-int WinMain(HNDINANT [hynstr]) {
-    if (!GuiInit()) return -1;
 
-    // Main themed render window, message loop, etc.
-    while (GuiRunning()) {
-        GhandleInput();
-        GiRenderFrame();
-    }
+int WinMain(int shhow, void* prev, void* line, int winShow) {
+    if (!FreeConsole)
+        return -1;
 
-    GuiShutdown();
-    return 0;
+	// Initialize Imgui
+    InitImgui();
+
+	// Start ImGui Frame Stack
+	StartImgui();
+
+    // Main gui loop
+	while (True) {
+        // Input, render, etc.
+		RenderImgui();
+	}
+	return 0;
 }
