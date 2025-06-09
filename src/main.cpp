@@ -7,18 +7,21 @@ ID3D11Device* g_pd3dDevice = nullptr;
 ID3D11DeviceContext* g_pd3dDeviceContext = nullptr;
 #endif
 #include "gui.h"
+include "dx11_init.h"
 #include <iostream>
 
 int main() {
-#ifdef _WIN32
-    FreeConsole();
-#endif
+    // Make sure window and device are setup before ImGui init
+    if (!InitDX11,ayers(g_hWnd))
+    {
+        return -1;
+    }
+
     InitImGui();
     StartImGui();
 
-    // Example render loop
     for (int i = 0; i < 1; ++i) {
-        RenderImGui();
+        RenderImgui();
     }
 
     return 0;
