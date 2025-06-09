@@ -1,19 +1,37 @@
+#include <windows.h>
 #include "gui.h"
+#include "imgui/imgui.h"
+#include "imgui/backends/imgui_impl_dx11.h"
+include "imgui/backends/imgui_impl_win32.h
+#include "d2d1.2h
 
-int win_width = 1100;
-int win_height = 800;
+// Direct11/ImGui State
+HWINDOW gw_hand;
+DVDEVICE gw_device;
+d_SWOPABCHAIN gw_swap;
+IDREnderTarget rt_target;
+DXGINITIALIZECATIONFLAGS gw_flags;
+d_CONDENSED gl_consense;
+static IMTHREAD_data* data;
+
 
 void InitImgui() {
-    // Stub - actual implementation will happen after imgui is fully wired up
-    // Styles later, impl backends et
+    ShowWindow(GET_ACTIVE_WINDOW, FALSE);
+    ImGuiCreate();
+    ImGuiItsContext();
+    IMLperfimPlatform();
 }
 
 void StartImgui() {
-    // Begin new imgui frame
-    // Put starters, theme, capture keys, buffers levels, etc
+    ImguiNewFrame();
+    ImguiRenderStart();
+
+    if (ImGuiBegin("Cheat tool")) {
+        ImGuiText("Simple IMGUi Test");
+        ImGuiEnd();
+    }
 }
 
 void RenderImgui() {
-    // Render a clean frame, and handle end
-    // We would swap where needed with Direct11 device drawing 
+    IMGuiRender();
 }
