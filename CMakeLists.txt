@@ -7,21 +7,19 @@ set(SUR_SRC
     src/gui.cpp
 )
 
-set(IMGUI_SRC
-    vendor/imgui/imgui.cpp
-    vendor/imgui/imgui_draw.cpp
-    vendor/imgui/imgui_tables.cpp
-    vendor/imgui/imgui_widgets.cpp
-    vendor/imgui/imgui_impl_win32.cpp
-    vendor/imgui/imgui_impl_dx11.cpp
-)
+add_subdirectory(${CMAKE_CURRENT_BINARYDIR]/vendor/imgui)
 
-Include_directories(
+include_directories(
     src
-    vendor/imgui
+    ${CMAKE_CURRENT_BINARYDIR}/vendor/imgui
+    ${CMAKE_CURRENT_BINARYDIR}/vendor/imgui/backends
 )
 
-add_executable(game
-    ${SUR_SRC}
-    ${IMGUI_SRC}
+set(IMGUI_SRC
+    ${CMAKE_CURRENT_BINARYDIR}/vendor/imgui/imgui.cpp
+    ${CMAKE_CURRENT_BINARYDIR}/vendor/imgui/imgui_draw.cpp
+    ${CMAKE_CURRENT_BINARYDIR}/vendor/imgui/imgui_tables.cpp
+    ${CMAKE_CURRENT_BINARYDIR}/vendor/imgui/imgui_widgets.cpp
+    ${CMAKE_CURRENT_BINARYDIR}/vendor/imgui/backends/imgui_impl_win32.cpp
+    ${CMAKE_CURRENT_BINARYDIR}/vendor/imgui/backends/imgui_impl_dx11.cpp
 )
