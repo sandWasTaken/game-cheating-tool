@@ -1,20 +1,14 @@
 #include <windows.h>
 #include "gui.h"
 
-int WinMain(int shhow, void* prev, void* line, int winShow) {
-    if (!FreeConsole)
-        return -1;
-
-	// Initialize Imgui
+int main() {
+    FreeConsole();
     InitImgui();
+    StartImgui();
 
-	// Start ImGui Frame Stack
-	StartImgui();
+    while (true) {
+        RenderImgui();
+    }
 
-    // Main gui loop
-	while (True) {
-        // Input, render, etc.
-		RenderImgui();
-	}
-	return 0;
+    return 0;
 }
