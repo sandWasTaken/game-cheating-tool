@@ -1,18 +1,19 @@
 #include "gui.h"
-int win_height = 800;
+
 int win_width = 1100;
+int win_height = 800;
 
 void InitImgui() {
-    // tod:
+    // Stub - actual implementation will happen after imgui is fully wired up
+    // Styles later, impl backends et
 }
 
 void StartImgui() {
-    // todo setup Imgui context
-    // themes layout, font, window setup etc
-    // in real code we use imgui_impl_dx11.cpp, imgui_impl_win32.cpp
-    // and window srcs/backend set up there too.
+    // Begin new imgui frame
+    // Put starters, theme, capture keys, buffers levels, etc
 }
 
 void RenderImgui() {
-    // todo render window with ImGui
+    // Render a clean frame, and handle end
+    // We would swap where needed with Direct11 device drawing 
 }
