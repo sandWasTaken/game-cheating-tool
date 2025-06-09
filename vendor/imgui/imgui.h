@@ -4,11 +4,12 @@
 
 // Github: https://github.com/ocornut/imgui
 
-#ifndef IMGUI_HI
-#define IMGUI_HI
+#ifndef IMGUI_H
+#define IMGUI_H
 
 class Imgui {
-    //... IMPLA STATE HERE
+    // minimal stub class
 };
 
-#endif
+#endif // IMGUI_H
+
